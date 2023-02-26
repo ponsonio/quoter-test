@@ -1,0 +1,7 @@
+rule CheckValues "Check the default values" salience 10 {
+    when
+        MC.TotalPropertyValue > 100
+    then
+        MC.AddError("hello from rules")
+        MC.PaymentAmount = 100
+}
